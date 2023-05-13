@@ -1,0 +1,67 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function dibujarCuadradoRojo(x,y){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "red"
+        pincel.fillRect(x,y,50 ,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+    }
+
+    function dibujarCuadradoAmarillo(x,y){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "yellow"
+        pincel.fillRect(x,y,50 ,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+    }
+
+    function dibujarCuadradoVerde(x,y){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = "green"
+        pincel.fillRect(x,y,50 ,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+    }
+
+
+    dibujarCuadradoRojo(0,0);
+    dibujarCuadradoAmarillo(0,50);
+    dibujarCuadradoVerde(0,100);
+
+    //FUNCION SIMPLIFICADA
+    function dibujarCuadrado(x,y,color){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50 ,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+    }
+
+    dibujarCuadrado(100,0,"green");
+    dibujarCuadrado(150,0,"green");
+    dibujarCuadrado(200,0,"green");
+
+    //FUNCION PARA CUADRADOS
+    function dibujarCuadrado(x,y,color){
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+        pincel.fillStyle = color;
+        pincel.fillRect(x,y,50 ,50);
+        pincel.strokeStyle = "black";
+        pincel.strokeRect(x,y,50,50);
+    }
+    
+    var x = 0;
+    while (x < 600){
+        dibujarCuadrado(x,250,"red");
+        dibujarCuadrado(x,300,"yellow");
+        dibujarCuadrado(x,350,"green");
+        x = x+ 50;
+    }
+</script>
